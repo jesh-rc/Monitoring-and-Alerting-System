@@ -1,0 +1,2 @@
+*/5 * * * * /absolute/path/systems-prog-proj/Monitoring-and-Alerting-System/main.sh >> /absolute/path/systems-prog-proj/Monitoring-and-Alerting-System/var/log/monitor.log 2>&1
+
