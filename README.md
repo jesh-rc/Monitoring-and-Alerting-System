@@ -91,31 +91,9 @@ This installs:
 - net-tools  
 - jq, bc, lsof, curl, etc.
 
-# 6. Gmail SMTP Configuration (Required for Email Alerts)
-
-To enable email alerts:
-
-1. Enable 2-Factor Authentication in Gmail  
-2. Generate an App Password  
-3. Edit `sudo nano /etc/postfix/sasl_passwd`:
-
-```
-[smtp.gmail.com]:587 your_email@gmail.com:YOUR_APP_PASSWORD
-```
-
-4. Secure and activate:
-
-```bash
-sudo chmod 600 /etc/postfix/sasl_passwd
-sudo postmap /etc/postfix/sasl_passwd
-sudo systemctl restart postfix
-```
-
-Next, make sure to add your email to alerts.sh, the file is located in etc/
-
 ---
 
-# 7. Configuration
+# 6. Configuration
 
 ## Thresholds
 Edit:
@@ -151,7 +129,7 @@ ssh
 
 ---
 
-# 8. Running the System Manually
+# 7. Running the System Manually
 
 ```bash
 ./main.sh
@@ -177,7 +155,7 @@ var/state/last_issues.txt
 
 ---
 
-# 9. Running Automatically with Cron
+# 8. Running Automatically with Cron
 
 Edit the crontab:
 
@@ -205,7 +183,7 @@ tail -n 20 var/log/cron.log
 
 ---
 
-# 10. Script Responsibilities
+# 9. Script Responsibilities
 
 ## main.sh
 Controls the full monitoring pipeline.
@@ -222,7 +200,7 @@ Logs alert messages and sends email using postfix.
 
 ---
 
-# 11. Logs and State
+# 10. Logs and State
 
 ### Logs
 ```
@@ -241,14 +219,7 @@ These persist data between monitoring cycles.
 
 ---
 
-# 12. Troubleshooting
-
-## No Email Received
-- Check `/var/log/mail.log`
-- Confirm postfix is using Gmail relay
-- Confirm App Password is correct
-- Ensure `relayhost = [smtp.gmail.com]:587` is set
-- Ensure `default_transport` and `relay_transport` are NOT set to “error”
+# 11. Troubleshooting
 
 ## Cron Not Running
 - Ensure cron is installed and enabled
@@ -262,9 +233,10 @@ chmod -R +x .
 
 ---
 
-# 13. Notes
+# 12. Notes
 
 - The project is fully modular and can be extended with SMS or webhook-based alerts.
 - No further file changes are required to run the system.
+- To have email alerts, the user will need to edit many OS files. Rather, the alerts were demonstrated live.
 
 
