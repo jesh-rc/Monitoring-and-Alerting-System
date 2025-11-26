@@ -1,1 +1,4 @@
-2025-11-26T02:47:22-05:00 ANOMALY: CPU=5% >> prev_avg=3%, threshold=4% (mult=1.5)
+2025-11-26T15:01:22-05:00 CRITICAL: Service 'apache2' is NOT active
+2025-11-26T15:01:22-05:00 CRITICAL: Service 'msql' is NOT active
+2025-11-26T15:01:22-05:00 CRITICAL: Service 'nginx' is NOT active
+2025-11-26T15:01:22-05:00 CRITICAL: Service 'ssh' is NOT active

@@ -18,7 +18,7 @@ ISSUE_FILE="${1:-$BASE_DIR/var/state/last_issues.txt}"
 # --------------------------------------------------------------------
 # Configure email address
 # --------------------------------------------------------------------
-#MAIL_TO="YOUR_EMAIL@gmail.com"
+MAIL_TO="jesh7422@gmail.com"
 SUBJECT="Monitoring Alert from $(hostname)"
 
 # --------------------------------------------------------------------
