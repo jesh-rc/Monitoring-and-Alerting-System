@@ -91,12 +91,6 @@ This installs:
 - net-tools  
 - jq, bc, lsof, curl, etc.
 
-## Do you need to edit `install_requirements.sh`?
-No.  
-It already installs everything required.
-
----
-
 # 6. Gmail SMTP Configuration (Required for Email Alerts)
 
 To enable email alerts:
