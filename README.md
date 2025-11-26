@@ -185,7 +185,7 @@ Edit the crontab:
 crontab -e
 ```
 
-Add:
+Remove the # to uncomment the following line:
 
 ```
 * * * * * /path/to/main.sh >> /path/to/var/log/cron.log 2>&1
