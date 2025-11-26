@@ -16,7 +16,9 @@ LOG_FILE="$BASE_DIR/var/log/monitor.log"
 # Helper function for logging
 # log message will prepend timestamp and MAIN tag, and append to the main log file
 log() {
-	echo "$date -iseconds) [MAIN] $*" | tee -a "$LOG_FILE"
+    local timestamp
+    timestamp="$(date '+%Y-%m-%d %H:%M:%S')"
+    echo "[$timestamp] [MAIN] $*" | tee -a "$LOG_FILE"
 }
 
 # --------------------------------------------------------------------
