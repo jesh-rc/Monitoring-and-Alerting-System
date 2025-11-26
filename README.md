@@ -111,11 +111,7 @@ sudo postmap /etc/postfix/sasl_passwd
 sudo systemctl restart postfix
 ```
 
-Test email:
-
-```bash
-echo "test" | mail -s "test" your_email@gmail.com
-```
+Next, make sure to add your email to alerts.sh, the file is located in etc/
 
 ---
 
