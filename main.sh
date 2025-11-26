@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 
 set -euo pipefail
+SCRIPT_PATH="${BASH_SOURCE[0]}"
 
 # Determine the project base directory
-BASE_DIR = "$(cd "$dirname "${BASH_SOURCE[0]}")" && pwd)"
+BASE_DIR="$(cd "$(dirname "$SCRIPT_PATH")" && pwd)"
 
 # --------------------------------------------------------------------
 
 # Path to the log file we will use for high level logs
-LOG_FILE = "$BASE_DIR/var/log/monitor.log"
+LOG_FILE="$BASE_DIR/var/log/monitor.log"
 
 # --------------------------------------------------------------------
 
