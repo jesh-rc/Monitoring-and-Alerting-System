@@ -30,9 +30,8 @@ log "===== Monitoring cycle start ====="
 
 # Collect and log system metrics using collect_data.sh
 if ! "$BASE_DIR/bin/collect_data.sh"; then
-  # If collect_data.sh fails, we log an error and exit with code 2
-  log "ERROR: collect_data.sh failed."
-  exit 2
+    log "ERROR: collect_data.sh failed."
+    exit 2
 fi
 
 # --------------------------------------------------------------------
@@ -54,13 +53,10 @@ else
 # --------------------------------------------------------------------
 
 # Send alert usinmg alert.sh
+"$BASE_DIR/bin/alert.sh" "$BASE_DIR/var/state/last_issues.txt" || \
+    log "ERROR: alert.sh failed."
 
- "$BASE_DIR/bin/alert.sh" "$BASE_DIR/var/state/last_issues.txt" || \
-      log "ERROR: alert.sh failed."
-
-    log "===== Monitoring cycle end (ALERT) ====="
-    # We return 1 to show that the cycle completed but issues were found.
-    exit 1
+log "===== Monitoring cycle end (ALERT) ====="
   else
     # Any other non-zero code (2, 3, ...) is treated as an internal error.
     log "ERROR: detect_issues.sh failed with code $rc."
