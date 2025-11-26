@@ -97,7 +97,7 @@ To enable email alerts:
 
 1. Enable 2-Factor Authentication in Gmail  
 2. Generate an App Password  
-3. Edit `/etc/postfix/sasl_passwd`:
+3. Edit `sudo nano /etc/postfix/sasl_passwd`:
 
 ```
 [smtp.gmail.com]:587 your_email@gmail.com:YOUR_APP_PASSWORD
