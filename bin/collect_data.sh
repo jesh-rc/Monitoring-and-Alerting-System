@@ -17,26 +17,34 @@ timestamp="$(date -Iseconds)"
 # --------------------------------------------------------------------
 # CPU usage (%)
 # --------------------------------------------------------------------
-# We use `top` in batch mode (-b) with one iteration (-n1).
-# It prints a line like:
-#   Cpu(s):  3.2 us,  1.0 sy,  0.0 ni, 95.2 id, ...
-# We grab the "id" (idle) value and do: 100 - idle = usage.
-cpu_pct=$(
-  top -bn1 | awk '
-    /Cpu\(s\)/ {
-      for (i = 1; i <= NF; i++) {
-        if ($i ~ /id,/) {
-          idle = $(i-1)
-          gsub(",", "", idle)
-          usage = 100 - idle
-          printf("%d\n", usage)
-          exit
-        }
-      }
-    }
-  '
-)
+# CPU usage using /proc/stat (accurate method)
+# Formula:
+#   usage = 100 * (idle_prev - idle_now) / (total_prev - total_now)
 
+cpu_stat_file="$STATE_DIR/cpu_prev"
+
+# Read current values
+read cpu user nice system idle iowait irq softirq steal guest < /proc/stat
+total=$((user + nice + system + idle + iowait + irq + softirq + steal))
+
+# If previous file exists, calculate delta
+if [ -f "$cpu_stat_file" ]; then
+    read prev_total prev_idle < "$cpu_stat_file"
+    diff_total=$((total - prev_total))
+    diff_idle=$((idle - prev_idle))
+
+    if [ "$diff_total" -gt 0 ]; then
+        cpu_pct=$(( (100 * (diff_total - diff_idle) / diff_total) ))
+    else
+        cpu_pct=0
+    fi
+else
+    # First run: no previous data → set CPU=0 so system doesn't alert
+    cpu_pct=0
+fi
+
+# Save current snapshot
+echo "$total $idle" > "$cpu_stat_file"
 # --------------------------------------------------------------------
 # Memory usage (%)
 # --------------------------------------------------------------------
