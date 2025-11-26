@@ -1,21 +1,17 @@
 #!/usr/bin/env bash
-# collect_data.sh
-
 set -euo pipefail
 
-# --------------------------------------------------------------------
-
-# Figure out the project base directory
-
-# --------------------------------------------------------------------
-
-
+# Determine project base directory
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
-# Path to the log file where we'll store our metrics
+# Directory to store state files (network counters, CPU window, etc.)
+STATE_DIR="$BASE_DIR/var/state"
+mkdir -p "$STATE_DIR"
+
+# Path to log file
 LOG_FILE="$BASE_DIR/var/log/monitor.log"
 
-# Current time in an ISO 8601 format, e.g. 2025-11-25T19:30:12
+# Timestamp
 timestamp="$(date -Iseconds)"
 
 # --------------------------------------------------------------------

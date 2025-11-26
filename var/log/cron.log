@@ -1,0 +1,64 @@
+[2025-11-26 02:11:01] [MAIN] ===== Monitoring cycle start =====
+2025-11-26T02:11:02-05:00 [DETECT] Issues detected; details written to /home/jesh7/systems-prog-proj/Monitoring-and-Alerting-System/var/state/last_issues.txt
+[2025-11-26 02:11:02] [MAIN] Issues detected – triggering alert.
+2025-11-26T02:11:02-05:00 [ALERT] Issues detected. Preparing to send alert.
+2025-11-26T02:11:02-05:00 [ALERT] Alert details (from /home/jesh7/systems-prog-proj/Monitoring-and-Alerting-System/var/state/last_issues.txt):
+2025-11-26T02:11:02-05:00 [ALERT]   2025-11-26T02:11:02-05:00 CRITICAL: Service 'apache2' is NOT active
+2025-11-26T02:11:02-05:00 [ALERT]   2025-11-26T02:11:02-05:00 CRITICAL: Service 'msql' is NOT active
+2025-11-26T02:11:02-05:00 [ALERT]   2025-11-26T02:11:02-05:00 CRITICAL: Service 'nginx' is NOT active
+2025-11-26T02:11:02-05:00 [ALERT]   2025-11-26T02:11:02-05:00 CRITICAL: Service 'ssh' is NOT active
+2025-11-26T02:11:02-05:00 [ALERT] Alert email sent to jesh7422@gmail.com.
+[2025-11-26 02:11:02] [MAIN] ===== Monitoring cycle end (ALERT) =====
+[2025-11-26 02:12:01] [MAIN] ===== Monitoring cycle start =====
+2025-11-26T02:12:01-05:00 [DETECT] Issues detected; details written to /home/jesh7/systems-prog-proj/Monitoring-and-Alerting-System/var/state/last_issues.txt
+[2025-11-26 02:12:01] [MAIN] Issues detected – triggering alert.
+2025-11-26T02:12:01-05:00 [ALERT] Issues detected. Preparing to send alert.
+2025-11-26T02:12:01-05:00 [ALERT] Alert details (from /home/jesh7/systems-prog-proj/Monitoring-and-Alerting-System/var/state/last_issues.txt):
+2025-11-26T02:12:01-05:00 [ALERT]   2025-11-26T02:12:01-05:00 CRITICAL: CPU=100% > CPU_PCT_CRIT=90
+2025-11-26T02:12:01-05:00 [ALERT]   2025-11-26T02:12:01-05:00 WARNING: CPU=100% > CPU_PCT_WARN=85
+2025-11-26T02:12:01-05:00 [ALERT]   2025-11-26T02:12:01-05:00 ANOMALY: CPU=100% >> prev_avg=25%, threshold=37% (mult=1.5)
+2025-11-26T02:12:01-05:00 [ALERT]   2025-11-26T02:12:01-05:00 CRITICAL: Service 'apache2' is NOT active
+2025-11-26T02:12:01-05:00 [ALERT]   2025-11-26T02:12:01-05:00 CRITICAL: Service 'msql' is NOT active
+2025-11-26T02:12:01-05:00 [ALERT]   2025-11-26T02:12:01-05:00 CRITICAL: Service 'nginx' is NOT active
+2025-11-26T02:12:01-05:00 [ALERT]   2025-11-26T02:12:01-05:00 CRITICAL: Service 'ssh' is NOT active
+2025-11-26T02:12:01-05:00 [ALERT] Alert email sent to jesh7422@gmail.com.
+[2025-11-26 02:12:01] [MAIN] ===== Monitoring cycle end (ALERT) =====
+[2025-11-26 02:13:01] [MAIN] ===== Monitoring cycle start =====
+2025-11-26T02:13:01-05:00 [DETECT] Issues detected; details written to /home/jesh7/systems-prog-proj/Monitoring-and-Alerting-System/var/state/last_issues.txt
+[2025-11-26 02:13:01] [MAIN] Issues detected – triggering alert.
+2025-11-26T02:13:01-05:00 [ALERT] Issues detected. Preparing to send alert.
+2025-11-26T02:13:01-05:00 [ALERT] Alert details (from /home/jesh7/systems-prog-proj/Monitoring-and-Alerting-System/var/state/last_issues.txt):
+2025-11-26T02:13:01-05:00 [ALERT]   2025-11-26T02:13:01-05:00 CRITICAL: CPU=100% > CPU_PCT_CRIT=90
+2025-11-26T02:13:01-05:00 [ALERT]   2025-11-26T02:13:01-05:00 WARNING: CPU=100% > CPU_PCT_WARN=85
+2025-11-26T02:13:01-05:00 [ALERT]   2025-11-26T02:13:01-05:00 ANOMALY: CPU=100% >> prev_avg=40%, threshold=60% (mult=1.5)
+2025-11-26T02:13:01-05:00 [ALERT]   2025-11-26T02:13:01-05:00 CRITICAL: Service 'apache2' is NOT active
+2025-11-26T02:13:01-05:00 [ALERT]   2025-11-26T02:13:01-05:00 CRITICAL: Service 'msql' is NOT active
+2025-11-26T02:13:01-05:00 [ALERT]   2025-11-26T02:13:01-05:00 CRITICAL: Service 'nginx' is NOT active
+2025-11-26T02:13:01-05:00 [ALERT]   2025-11-26T02:13:01-05:00 CRITICAL: Service 'ssh' is NOT active
+2025-11-26T02:13:01-05:00 [ALERT] Alert email sent to jesh7422@gmail.com.
+[2025-11-26 02:13:01] [MAIN] ===== Monitoring cycle end (ALERT) =====
+[2025-11-26 02:14:00] [MAIN] ===== Monitoring cycle start =====
+2025-11-26T02:14:01-05:00 [DETECT] Issues detected; details written to /home/jesh7/systems-prog-proj/Monitoring-and-Alerting-System/var/state/last_issues.txt
+[2025-11-26 02:14:01] [MAIN] Issues detected – triggering alert.
+2025-11-26T02:14:01-05:00 [ALERT] Issues detected. Preparing to send alert.
+2025-11-26T02:14:01-05:00 [ALERT] Alert details (from /home/jesh7/systems-prog-proj/Monitoring-and-Alerting-System/var/state/last_issues.txt):
+2025-11-26T02:14:01-05:00 [ALERT]   2025-11-26T02:14:01-05:00 CRITICAL: CPU=100% > CPU_PCT_CRIT=90
+2025-11-26T02:14:01-05:00 [ALERT]   2025-11-26T02:14:01-05:00 WARNING: CPU=100% > CPU_PCT_WARN=85
+2025-11-26T02:14:01-05:00 [ALERT]   2025-11-26T02:14:01-05:00 ANOMALY: CPU=100% >> prev_avg=50%, threshold=75% (mult=1.5)
+2025-11-26T02:14:01-05:00 [ALERT]   2025-11-26T02:14:01-05:00 CRITICAL: Service 'apache2' is NOT active
+2025-11-26T02:14:01-05:00 [ALERT]   2025-11-26T02:14:01-05:00 CRITICAL: Service 'msql' is NOT active
+2025-11-26T02:14:01-05:00 [ALERT]   2025-11-26T02:14:01-05:00 CRITICAL: Service 'nginx' is NOT active
+2025-11-26T02:14:01-05:00 [ALERT]   2025-11-26T02:14:01-05:00 CRITICAL: Service 'ssh' is NOT active
+2025-11-26T02:14:01-05:00 [ALERT] Alert email sent to jesh7422@gmail.com.
+[2025-11-26 02:14:01] [MAIN] ===== Monitoring cycle end (ALERT) =====
+[2025-11-26 02:15:01] [MAIN] ===== Monitoring cycle start =====
+2025-11-26T02:15:01-05:00 [DETECT] Issues detected; details written to /home/jesh7/systems-prog-proj/Monitoring-and-Alerting-System/var/state/last_issues.txt
+[2025-11-26 02:15:01] [MAIN] Issues detected – triggering alert.
+2025-11-26T02:15:01-05:00 [ALERT] Issues detected. Preparing to send alert.
+2025-11-26T02:15:01-05:00 [ALERT] Alert details (from /home/jesh7/systems-prog-proj/Monitoring-and-Alerting-System/var/state/last_issues.txt):
+2025-11-26T02:15:01-05:00 [ALERT]   2025-11-26T02:15:01-05:00 CRITICAL: Service 'apache2' is NOT active
+2025-11-26T02:15:01-05:00 [ALERT]   2025-11-26T02:15:01-05:00 CRITICAL: Service 'msql' is NOT active
+2025-11-26T02:15:01-05:00 [ALERT]   2025-11-26T02:15:01-05:00 CRITICAL: Service 'nginx' is NOT active
+2025-11-26T02:15:01-05:00 [ALERT]   2025-11-26T02:15:01-05:00 CRITICAL: Service 'ssh' is NOT active
+2025-11-26T02:15:01-05:00 [ALERT] Alert email sent to jesh7422@gmail.com.
+[2025-11-26 02:15:01] [MAIN] ===== Monitoring cycle end (ALERT) =====
